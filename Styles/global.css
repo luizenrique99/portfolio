@@ -37,6 +37,14 @@ footer {
    padding: 0 40% 0 0;
 }
 
+#emoji {
+    background-image: url(../Assets/emoji_novo.png);
+    background-repeat: no-repeat;
+    height: 25rem;
+    width: 19rem;
+    display: inline-block;
+}
+
 .meu_nome{
     color: var(--cor-terciaria);
 }
@@ -63,7 +71,7 @@ footer {
 }
 
 #eu {
-    background-image: url(../Assets/eu_teste.png);
+    background-image: url(../Assets/eu.png);
     background-color: var(--cor-terciaria);
     height: 20rem;
     width: 20rem;
@@ -291,11 +299,6 @@ button:hover{
         font-size: 20px;
         margin: 32% 0 0 0;
         font-size: 20px;
-    }
-
-    #emoji {
-        margin: 0;
-        width: 24em;
     }
 
     .subsecao{
