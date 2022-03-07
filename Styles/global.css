@@ -1,0 +1,347 @@
+:root {
+    --cor-primaria: #212121;
+    --cor-secundaria: #262626;
+    --cor-terciaria: #cd00bb;
+  }  
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {    
+    color: white;
+    font-family: system-ui;
+    background-color: var(--cor-primaria);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+header{
+    height: 1em;
+    padding: 2em;
+    position: fixed;
+    width: 100%;
+    background: var(--cor-primaria);
+    text-align: center;
+}
+
+footer {
+    height: 5em;
+}
+
+#logo {
+   display: inline; 
+   font-weight: 600;
+   width: 10rem;
+   padding: 0 40% 0 0;
+}
+
+.meu_nome{
+    color: var(--cor-terciaria);
+}
+
+#consideracoes {
+    text-align: center;
+    padding-top: 2em;
+}
+
+#btn-mobile {
+    display: none;
+}
+
+#apresentacao {
+    margin: 10% 0 0 0%;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.secao {
+    text-align: center;
+    height: 100%;
+    display: flow-root;
+}
+
+#eu {
+    background-image: url(../Assets/eu_teste.png);
+    background-color: var(--cor-terciaria);
+    height: 20rem;
+    width: 20rem;
+}
+
+#eu:hover {
+    background-color: purple;
+}
+
+#logo_magni {
+    background-image: url(../Assets/magnifinance.jpg);
+}
+
+#logo_aka {
+    background-image: url(../Assets/logo_aka.jpg);
+}
+
+#logo_dpworld {
+    background-image: url(../Assets/dpworld_logo.png);
+}
+
+.imagem_redonda {
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;    
+    display: inline-block;
+    height: 10rem;
+    width: 10rem;
+    margin: 2rem;
+}
+
+#banner {
+    text-align: center; 
+}
+
+#about, #experiences, #contact {
+    background: var(--cor-secundaria);
+}
+
+ul {
+    list-style: none;
+    display: inline;
+    font-weight: 600;
+}
+
+li {
+    
+    display: inline;
+    padding-right: 1em;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: var(--cor-terciaria);
+}
+
+.titulo {
+    margin: 2rem;
+}
+
+.tecnologia {
+    height: 5rem;
+}
+
+.subtitulo {
+    margin-bottom: 1rem;
+}
+
+#sobre_descricao {
+    width: 50%;
+    text-align: justify;
+}
+
+.subsecao {
+    margin: 2em;
+    display: inline-block;
+    vertical-align: top;    
+}
+
+.tecnologia:hover, #linkedin:hover, #email:hover, #telefone:hover {
+    animation: zoom-in-zoom-out 1s ease both;
+}
+
+.secao, #banner {
+    scroll-margin-top: 4.5em;
+}
+
+button {
+    width: 15rem;
+    height: 3.8rem;
+    background: var(--cor-terciaria);
+    box-shadow: 0 1.6rem 1.6rem rgb(51 51 51 / 25%);
+    border-radius: 3rem;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border: none;
+    margin: 1.5rem 0 1.5rem 0;
+    font-size: 1rem;
+}
+
+button:hover{
+    background-color: transparent;
+    border: medium groove var(--cor-terciaria);
+    color: var(--cor-terciaria);
+}
+
+.card {
+    height: 30rem;
+    width: 24rem;
+    background: var(--cor-secundaria);
+    border-radius: 1rem;
+    margin: 1rem;
+    display: inline-block;
+}
+
+#spotify_player_project, #magniuniversity, #good_morning_generator {
+    display: block;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    transition: .2s;
+}
+
+#spotify_player_project {
+    background-image: url(../Assets/spotify.png);
+}
+
+#magniuniversity {
+    background-image: url(../Assets/university.png);
+    background-color: #3F43A8;
+}
+
+#good_morning_generator {
+    background-image: url(../Assets/bom_dia.png);
+}
+
+#button_ver_git{
+    margin: 2rem;
+}
+
+#linkedin, #email, #telefone {
+    background-color: whitesmoke;
+    cursor: pointer;
+    width: 7rem;
+    height: 7rem;
+}
+
+
+#linkedin {
+    background-image: url(../Assets/linkedin.png);
+   
+}
+#email {
+    background-image: url(../Assets/gmail.png);
+}
+
+#telefone {
+    background-image: url(../Assets/wpp.png);
+}
+
+@keyframes zoom-in-zoom-out {
+    0% {
+      transform: scale(1, 1);
+    }
+    100% {
+      transform: scale(1.1, 1.1);
+    }
+  }
+
+::selection {
+    background:var(--cor-terciaria);
+  }
+
+@media (max-width: 700px) {
+    #btn-mobile {
+        display: inline-block;    
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 1rem;
+        color: white;
+    }    
+
+     #menu {
+         display: block;    
+         position: absolute;
+         top: 90px;
+         right: 0;
+         width: 100%;
+         height: 0;
+         background: #333333;
+         transition: .6s;
+         z-index: 1000;  
+         visibility: hidden;
+         overflow-y: hidden;
+    } 
+
+    #menu.active {
+       height: calc(100vh - 90px);
+       visibility: visible;
+       overflow-y: auto;
+       font-size: 20px;
+       width: 65% ;
+    }
+
+    #menu li {
+        display: block;
+        padding: 1rem;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.05);
+    }
+
+    header {
+        height: 2em;
+        padding: 2em 2em;
+        text-align: left;
+    }
+
+    #apresentacao {
+        font-size: 20px;
+        margin: 32% 0 0 0;
+        font-size: 20px;
+    }
+
+    #emoji {
+        margin: 0;
+        width: 24em;
+    }
+
+    .subsecao{
+        margin: 1em;
+    }
+
+    .linha {
+        width: 1.5rem;
+        height: 0.188rem;
+        border-radius: 2px;
+        transition: transform .2s ease-out;
+        -webkit-transition: transform .2s ease-out;
+        background: var(--cor-terciaria);
+        margin: 0.2em;
+    }
+    
+    #linha1.active {
+        transform: rotate(-45deg);
+    }
+
+    #linha2.active {
+        transform: rotate(45deg);
+    }
+
+    #linha3.active{
+        display: none;
+    }   
+
+    #eu {
+        height: 15rem;
+        width: 15rem;
+    }
+
+    #sobre_descricao {
+        width: 90%;
+        text-align: justify;
+    }
+    
+    .card {
+        width: 20rem;
+        padding: 1rem;
+        margin: 1rem 0;
+    }
+
+    button {
+        width: 100%;
+    }
+
+}
