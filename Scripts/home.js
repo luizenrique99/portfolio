@@ -22,7 +22,7 @@ function openResume() {
   }
 
 function verGithub() {
-    criarLink('https://github.com/luizenrique99');
+    criarLink('https://github.com/luizcamargo99');
 }
 
 function verLinkedin() {
