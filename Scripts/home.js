@@ -18,7 +18,7 @@ function tratarLinhasMenu () {
 }
 
 function openResume() {
-    criarLink('../Assets/CV English - Luiz Camargo [UPDATE] (1).pdf');
+    criarLink('./Assets/CV English - Luiz Camargo [UPDATE] (1).pdf');
   }
 
 function verGithub() {
