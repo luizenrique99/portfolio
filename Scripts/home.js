@@ -17,18 +17,6 @@ function tratarLinhasMenu () {
     }
 }
 
-function openResume() {
-    criarLink('./Assets/CV English - Luiz Camargo [UPDATE] (1).pdf');
-  }
-
-function verGithub() {
-    criarLink('https://github.com/luizcamargo99');
-}
-
-function verLinkedin() {
-    criarLink('https://www.linkedin.com/in/luiz-enrique-nobrega-de-camargo-2bb849141/');
-}
-  
 function criarLink(url) {
     const tagA = document.createElement("a");    
     tagA.href = url;
