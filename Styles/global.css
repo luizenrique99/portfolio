@@ -309,7 +309,7 @@ button:hover{
         transition: transform .2s ease-out;
         -webkit-transition: transform .2s ease-out;
         background: var(--cor-terciaria);
-        margin: 0.2em;
+        margin-top: 0.2em;
     }
     
     #linha1.active {
