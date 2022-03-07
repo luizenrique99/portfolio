@@ -265,6 +265,7 @@ button:hover{
          display: block;    
          position: absolute;
          top: 90px;
+         font-size: 20px;
          right: 0;
          width: 100%;
          height: 0;
@@ -278,8 +279,7 @@ button:hover{
     #menu.active {
        height: calc(100vh - 90px);
        visibility: visible;
-       overflow-y: auto;
-       font-size: 20px;
+       overflow-y: auto;     
        width: 65% ;
     }
 
@@ -324,7 +324,7 @@ button:hover{
     }
 
     #linha3.active{
-        display: none;
+        visibility: hidden;
     }   
 
     #eu {
