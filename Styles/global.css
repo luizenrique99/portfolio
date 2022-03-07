@@ -18,7 +18,7 @@ html, body {
 }
 
 header{
-    height: 1em;
+    height: 5%;
     padding: 2em;
     position: fixed;
     width: 100%;
@@ -34,7 +34,8 @@ footer {
    display: inline; 
    font-weight: 600;
    width: 10rem;
-   padding: 0 40% 0 0;
+   padding: 0 35% 0 0;
+   font-size: 1.2rem;
 }
 
 #emoji {
@@ -253,12 +254,8 @@ button:hover{
 
 @media (max-width: 700px) {
     #btn-mobile {
-        display: inline-block;    
-        background: none;
-        border: none;
+        display: inline-block; 
         cursor: pointer;
-        font-size: 1rem;
-        color: white;
     }    
 
      #menu {
