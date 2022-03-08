@@ -10,6 +10,11 @@ function tratarMenu () {
     menu.classList.toggle('active');    
 }
 
+function mudarTema () {
+    const body = document.getElementsByTagName('body');
+    body[0].classList.toggle('light-mode');
+}
+
 function tratarLinhasMenu () {
     const linhas = document.getElementsByClassName('linha');  
     for (let index = 0; index < linhas.length; index++) {
