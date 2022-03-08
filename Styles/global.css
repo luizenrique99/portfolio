@@ -40,8 +40,6 @@ footer {
     height: 5em;
 }
 
-
-
 #mode {
     margin-bottom: .3rem;
     font-size: .75rem;
@@ -115,7 +113,7 @@ footer {
    display: inline; 
    font-weight: 600;
    width: 10rem;
-   padding: 0 35% 0 0;
+   margin-right: 35%;
    font-size: 1.2rem;
 }
 
@@ -371,6 +369,10 @@ button:hover{
         height: 2em;
         padding: 2em 2em;
         text-align: left;
+    }
+
+    #logo {
+        margin-right: 40%;
     }
 
     #apresentacao {
