@@ -50,6 +50,11 @@ footer {
      content: var(--mode);
  }
 
+ .links {
+     font-weight: bold;
+     color: var(--cor-terciaria);
+ }
+
  .switch {
     position: relative;
     display: inline-block;
