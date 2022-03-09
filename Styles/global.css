@@ -26,11 +26,9 @@ html, body {
     background-color: var(--cor-primaria);
     overflow-y: auto;
     overflow-x: hidden;
-    transition: .6s;
 }
 
 header{
-    transition: .6s;
     padding: 1em;
     position: fixed;
     width: 100%;
