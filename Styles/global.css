@@ -241,7 +241,7 @@ a:hover {
     vertical-align: top;    
 }
 
-.tecnologia:hover, #linkedin:hover, #email:hover, #telefone:hover {
+.tecnologia:hover, .contacts:hover {
     animation: zoom-in-zoom-out 1s ease both;
 }
 
@@ -304,7 +304,7 @@ button:hover{
     margin: 2rem;
 }
 
-#linkedin, #email, #telefone {
+.contacts {
     background-color: whitesmoke;
     cursor: pointer;
     width: 7rem;
