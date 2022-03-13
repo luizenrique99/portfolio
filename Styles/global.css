@@ -119,7 +119,7 @@ footer {
    display: inline; 
    font-weight: 600;
    width: 10rem;
-   margin-right: 35%;
+   margin-right: 10%;
    font-size: 1.2rem;
 }
 
@@ -145,7 +145,7 @@ footer {
 }
 
 #apresentacao {
-    margin: 10% 0 0 0%;
+    margin-top: 10rem;
     text-align: center;
     font-size: 1.2em;
 }
@@ -193,7 +193,7 @@ footer {
     text-align: center; 
 }
 
-#about, #experiences, #contact {
+.listrado{
     background: var(--cor-secundaria);
 }
 
@@ -203,8 +203,7 @@ ul {
     font-weight: 600;
 }
 
-li {
-    
+li {    
     display: inline;
     padding-right: 1em;
 }
@@ -304,6 +303,45 @@ button:hover{
     margin: 2rem;
 }
 
+.depoimento {
+    width: 22rem;
+    background: var(--cor-primaria);
+    height: 15rem;
+    border-radius: 1rem;
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: .5rem;
+}
+
+.frase-depoimento{
+    font-style: italic;
+    font-size: large;
+}
+
+.frase-depoimento::before, .frase-depoimento::after {
+    content: '"';
+}
+
+.nome-depoimento {
+    margin-top: 1rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.cargo-depoimento {
+    font-style: italic;
+}
+
+#depoimentos {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1rem;
+}
+
 .contacts {
     background-color: whitesmoke;
     cursor: pointer;
@@ -335,6 +373,12 @@ button:hover{
 
 ::selection {
     background:var(--cor-terciaria);
+  }
+
+  @media (max-width: 900px) {
+      #menu {
+          font-size: .65em;
+      }
   }
 
 @media (max-width: 700px) {
@@ -385,8 +429,6 @@ button:hover{
 
     #apresentacao {
         font-size: 20px;
-        margin: 32% 0 0 0;
-        font-size: 20px;
     }
 
     .subsecao{
@@ -433,6 +475,10 @@ button:hover{
 
     button {
         width: 100%;
+    }
+
+    .depoimento {
+        width: 20rem;
     }
 
 }
