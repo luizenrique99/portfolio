@@ -271,11 +271,21 @@ button:hover{
 
 .card {
     height: 30rem;
-    width: 24rem;
+    width: 22rem;
     background: var(--cor-secundaria);
     border-radius: 1rem;
     margin: 1rem;
-    display: inline-block;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+
+#depoimentos .card {
+    background: var(--cor-primaria);
 }
 
 #spotify_player_project, #magniuniversity, #good_morning_generator {
@@ -302,19 +312,6 @@ button:hover{
 #button_ver_git{
     margin: 2rem;
 }
-
-.depoimento {
-    width: 22rem;
-    background: var(--cor-primaria);
-    height: 15rem;
-    border-radius: 1rem;
-    margin: 1rem;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding: .5rem;
-}
-
 .frase-depoimento{
     font-style: italic;
     font-size: large;
@@ -476,9 +473,4 @@ button:hover{
     button {
         width: 100%;
     }
-
-    .depoimento {
-        width: 20rem;
-    }
-
 }
