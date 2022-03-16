@@ -133,11 +133,16 @@ footer {
     display: inline-block;  
 }
 
+.listrado{
+    background: var(--cor-secundaria) !important;
+}
+
 #animacao-header {
     animation:animacao-header 1s ease both;;
 }
 
 .animation-show {
+    visibility: visible;
     animation: animacao-entrada .7s ease both;
 } 
 
@@ -181,8 +186,7 @@ footer {
 .secao {
     text-align: center;
     height: 100%;
-    display: flow-root;
- 
+    display: flow-root;   
 }
 
 #eu {
@@ -222,9 +226,6 @@ footer {
     text-align: center; 
 }
 
-.listrado{
-    background: var(--cor-secundaria);
-}
 
 ul {
     list-style: none;
@@ -275,6 +276,7 @@ a:hover {
 
 .secao, #banner {
     scroll-margin-top: 4.5em;
+    visibility: hidden;
 }
 
 button {
