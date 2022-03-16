@@ -35,10 +35,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function animacoesPagina() {
     getElementosSecao('banner');
+    getSecoes();
+
+}
+
+function getSecoes () {
     const secao = document.querySelectorAll('.secao');
     for (let index = 0; index < secao.length; index++) {
-        const elemento = secao[index];
-        getElementosSecao(elemento.id);
+        getElementosSecao(secao[index].id);
     }
 }
 
