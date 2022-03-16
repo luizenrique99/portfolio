@@ -1,29 +1,27 @@
-
-
 function toggleMenu() {
     tratarMenu();
-    tratarLinhasMenu(); 
+    tratarLinhasMenu();
 }
 
-function tratarMenu () {
+function tratarMenu() {
     const menu = document.getElementById('menu');
-    menu.classList.toggle('active');    
+    menu.classList.toggle('active');
 }
 
-function mudarTema () {
+function mudarTema() {
     const body = document.getElementsByTagName('body');
     body[0].classList.toggle('light-mode');
 }
 
-function tratarLinhasMenu () {
-    const linhas = document.getElementsByClassName('linha');  
+function tratarLinhasMenu() {
+    const linhas = document.getElementsByClassName('linha');
     for (let index = 0; index < linhas.length; index++) {
-        linhas[index].classList.toggle('active');    
+        linhas[index].classList.toggle('active');
     }
 }
 
 function criarLink(url) {
-    const tagA = document.createElement("a");    
+    const tagA = document.createElement("a");
     tagA.href = url;
     tagA.target = 'blank';
     tagA.click();
@@ -35,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function() {
     animacoesPagina();
 });
 
-function animacoesPagina () {
+function animacoesPagina() {
     getElementosSecao('banner');
     const secao = document.querySelectorAll('.secao');
     for (let index = 0; index < secao.length; index++) {
@@ -44,41 +42,37 @@ function animacoesPagina () {
     }
 }
 
-function getElementosSecao (secaoId) {
+function getElementosSecao(secaoId) {
     const secao = document.getElementById(secaoId);
     for (let index = 0; index < secao.childNodes.length; index++) {
         const elemento = secao.childNodes[index];
         if (elemento.childNodes > 0) {
             getElementosSecao(elemento.id);
+        } else {
+            animacaoPorElemento(elemento);
         }
-        else {
-            animacaoPorElemento(elemento);  
-        }
-        
+
     }
 }
 
-function animacaoPorElemento (elemento) {
+function animacaoPorElemento(elemento) {
     if (elemento.nodeType === 1) {
+        let callback = function(entries) {
+            entries.forEach(entry => {
 
-    const target = elemento;
+                if (entry.intersectionRatio > 0) {
+                    elemento.classList.add('animation-show');
+                }
 
-    let callback = function(entries) {
-        entries.forEach(entry => {
-    
-            if (entry.intersectionRatio > 0) {
-                target.classList.add('animation-show');
-              } 
-    
-        });
-    };
+            });
+        };
 
-    const options = {
-    root: null,
-    threshold: [0, 1]
+        const options = {
+            root: null,
+            threshold: [0, 1]
+        }
+
+        const io = new IntersectionObserver(callback, options);
+        io.observe(elemento);
     }
-
-    const io = new IntersectionObserver(callback, options);
-    io.observe(target);
-}
 }
