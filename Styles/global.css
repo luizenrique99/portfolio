@@ -137,6 +137,59 @@ footer {
     background: var(--cor-secundaria) !important;
 }
 
+.circulo_animacao {
+    background: var(--cor-terciaria);
+    height: 7rem;
+    width: 7rem;
+    position: absolute;
+    animation: lado 10s infinite;
+
+}
+
+.triangulo {
+    width: 0;
+    height: 0;
+    position: absolute;
+    border-left: 3rem solid transparent;
+    border-right: 3rem solid transparent;
+    border-bottom: 5rem solid var(--cor-terciaria);
+    margin: 2rem;
+    padding-top: 5rem;
+    z-index: -1;
+    display: inline-block;
+    animation: cima 10s infinite;
+}
+
+@keyframes lado {
+	0% {
+		transform: translateX(0%);
+	}
+
+	50% {
+        background: purple;
+		transform: translateX(100%);
+	}
+
+	100% {
+        transform: translateX(1%);
+	}
+}
+
+@keyframes cima {
+	0% {
+		transform: translateY(0%), rotate(20%);
+	}
+
+	50% {   
+        border-bottom-color: purple;
+		transform: translateY(100%);
+	}
+
+	100% {
+        transform: translateY(1%);
+	}
+}
+
 #animacao-header {
     animation:animacao-header 1s ease both;;
 }
