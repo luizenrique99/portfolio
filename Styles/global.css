@@ -237,6 +237,7 @@ input:checked+.slider:before {
 #eu {
 	background-image: url(../Assets/eu.png);
 	background-color: var(--cor-terciaria);
+    border: 0.2rem solid;
 	height: 20rem;
 	width: 20rem;
 }
@@ -359,6 +360,7 @@ button:hover {
 	align-items: center;
 	flex-wrap: wrap;
 	padding: 1rem;
+    border: 0.1rem solid var(--cor-terciaria);
 }
 
 #depoimentos .card {
