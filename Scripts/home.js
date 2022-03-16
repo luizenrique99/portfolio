@@ -59,14 +59,12 @@ function animacaoPorElemento(elemento) {
     if (elemento.nodeType === 1) {
         let callback = function(entries) {
             entries.forEach(entry => {
-
                 if (entry.intersectionRatio > 0) {
                     elemento.classList.add('animation-show');
                 }
-
             });
         };
-
+        
         const options = {
             root: null,
             threshold: [0, 1]

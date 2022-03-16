@@ -388,7 +388,7 @@ button:hover {
     border: 0.1rem solid var(--cor-terciaria);
 }
 
-#depoimentos .card {
+#testimonials .card {
 	background: var(--cor-primaria);
 }
 
