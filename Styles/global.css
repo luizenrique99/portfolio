@@ -133,9 +133,22 @@ footer {
     display: inline-block;  
 }
 
+#animacao-header {
+    animation:animacao-header 1s ease both;;
+}
+
 .animation-show {
-    animation: animacao-entrada 1s ease both;
+    animation: animacao-entrada .7s ease both;
 } 
+
+@keyframes animacao-header {
+    0% {
+        transform: translateX(-100%)
+    }
+    100% {
+        transform: translateX(1);
+    }
+  }
 
 @keyframes animacao-entrada {
     0% {
