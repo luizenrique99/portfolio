@@ -32,4 +32,53 @@ function criarLink(url) {
 document.addEventListener("DOMContentLoaded", function() {
     const btnMobile = document.getElementById('btn-mobile');
     btnMobile.addEventListener('click', toggleMenu);
+    animacoesPagina();
 });
+
+function animacoesPagina () {
+    getElementosSecao('banner');
+    const secao = document.querySelectorAll('.secao');
+    for (let index = 0; index < secao.length; index++) {
+        const elemento = secao[index];
+        getElementosSecao(elemento.id);
+    }
+}
+
+function getElementosSecao (secaoId) {
+    const secao = document.getElementById(secaoId);
+    for (let index = 0; index < secao.childNodes.length; index++) {
+        const elemento = secao.childNodes[index];
+        if (elemento.childNodes > 0) {
+            getElementosSecao(elemento.id);
+        }
+        else {
+            animacaoPorElemento(elemento);  
+        }
+        
+    }
+}
+
+function animacaoPorElemento (elemento) {
+    if (elemento.nodeType === 1) {
+
+    const target = elemento;
+
+    let callback = function(entries) {
+        entries.forEach(entry => {
+    
+            if (entry.intersectionRatio > 0) {
+                target.classList.add('animation-show');
+              } 
+    
+        });
+    };
+
+    const options = {
+    root: null,
+    threshold: [0,  1]
+    }
+
+    const io = new IntersectionObserver(callback, options);
+    io.observe(target);
+}
+}
