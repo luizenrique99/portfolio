@@ -340,9 +340,8 @@ a:hover {
 	vertical-align: top;
 }
 
-.tecnologia:hover,
-.contacts:hover {
-	animation: zoom-in-zoom-out 1s ease both;
+.tecnologia:hover {
+	animation: zoom-in-zoom-out 1s ease forwards;
 }
 
 .secao,

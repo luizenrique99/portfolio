@@ -45,13 +45,13 @@ function animacoesPagina() {
 function getElementosSecao(secaoId) {
     const secao = document.getElementById(secaoId);
     for (let index = 0; index < secao.childNodes.length; index++) {
-        const elemento = secao.childNodes[index];
-        if (elemento.childNodes > 0) {
+        const elemento = secao.childNodes[index]; 
+        if (elemento.id === 'depoimentos') {
             getElementosSecao(elemento.id);
-        } else {
+        }
+        else {
             animacaoPorElemento(elemento);
         }
-
     }
 }
 
