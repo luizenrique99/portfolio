@@ -26,6 +26,7 @@ html, body {
     background-color: var(--cor-primaria);
     overflow-y: auto;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 header{
@@ -129,8 +130,21 @@ footer {
     background-repeat: no-repeat;
     height: 25rem;
     width: 19rem;
-    display: inline-block;
+    display: inline-block;  
 }
+
+.animation-show {
+    animation: animacao-entrada 1s ease both;
+} 
+
+@keyframes animacao-entrada {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+  }
 
 .meu_nome{
     color: var(--cor-terciaria);
@@ -155,6 +169,7 @@ footer {
     text-align: center;
     height: 100%;
     display: flow-root;
+ 
 }
 
 #eu {
