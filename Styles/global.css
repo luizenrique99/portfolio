@@ -160,6 +160,18 @@ input:checked+.slider:before {
 	animation: cima 10s infinite;
 }
 
+.quadrado {
+    opacity: .2;
+    width: 5rem;
+    position: absolute;
+    border-bottom: 5rem solid var(--cor-terciaria);
+    margin: -9rem 21rem;
+    padding-top: 5rem;
+    z-index: -1;
+    display: inline-block;
+    animation: baixo 10s infinite;
+}
+
 @keyframes lado {
 	0% {
 		transform: translateX(0%);
@@ -175,7 +187,7 @@ input:checked+.slider:before {
 
 @keyframes cima {
 	0% {
-		transform: translateY(0%), rotate(20%);
+		transform: translateY(0%);
 	}
 	50% {
 		border-bottom-color: purple;
@@ -183,6 +195,19 @@ input:checked+.slider:before {
 	}
 	100% {
 		transform: translateY(1%);
+	}
+}
+
+@keyframes baixo {
+	0% {
+		transform: translateY(100%);
+	}
+	50% {
+		border-bottom-color: purple;
+		transform: translateY(0%);
+	}
+	100% {
+		transform: translateY(99%);
 	}
 }
 
