@@ -2,6 +2,47 @@ function toggleMenu() {
     tratarMenu();
     tratarLinhasMenu();
 }
+function proximoSlideProjects (destino) {
+    tratarSlide(destino);
+    tratarPagina(destino);
+    if (screen.width < 900) {
+        criarLink('#projects');
+    }
+}
+
+function tratarSlide(slideDestino) {
+    const slides = [
+        document.getElementById('slide-1'),
+        document.getElementById('slide-2')
+    ];
+
+    for (let index = 0; index < slides.length; index++) {
+        const element = slides[index];
+        if (element.id == `slide-${slideDestino}`){
+            element.classList.remove('offline');
+        }
+        else {
+            element.classList.add('offline');
+        }       
+    }
+}
+
+function tratarPagina(paginaDestino) {
+    const paginas = [
+        document.getElementById('pagina-1'),
+        document.getElementById('pagina-2')
+    ];
+
+    for (let index = 0; index < paginas.length; index++) {
+        const element = paginas[index];
+        if (element.id == `pagina-${paginaDestino}`){
+            element.classList.add('active');
+        }
+        else {
+            element.classList.remove('active');
+        }  
+    }
+}
 
 function tratarMenu() {
     const menu = document.getElementById('menu');
@@ -29,14 +70,13 @@ function criarLink(url) {
 
 document.addEventListener("DOMContentLoaded", function() {
     const btnMobile = document.getElementById('btn-mobile');
-    btnMobile.addEventListener('click', toggleMenu);
+    btnMobile.addEventListener('click', toggleMenu);  
     animacoesPagina();
 });
 
 function animacoesPagina() {
     getElementosSecao('banner');
     getSecoes();
-
 }
 
 function getSecoes () {

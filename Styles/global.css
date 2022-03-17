@@ -413,6 +413,10 @@ button:hover {
 	background-image: url(../Assets/bom_dia.png);
 }
 
+#instagram {
+	background-image: url(../Assets/insta.png);
+}
+
 #button_ver_git {
 	margin: 2rem;
 }
@@ -462,6 +466,22 @@ button:hover {
 
 #telefone {
 	background-image: url(../Assets/wpp.png);
+}
+
+.offline {
+    display: none;
+}
+
+.pagina-slide {
+    cursor: pointer;
+    width: 1rem;
+    height: 1rem;
+    background: rgb(180, 180, 180);  
+    margin: 0;
+}
+
+.active {
+    background: var(--cor-terciaria);
 }
 
 @keyframes zoom-in-zoom-out {
