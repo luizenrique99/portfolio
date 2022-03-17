@@ -5,9 +5,13 @@ function toggleMenu() {
 function proximoSlideProjects (destino) {
     tratarSlide(destino);
     tratarPagina(destino);
-    if (screen.width < 900) {
-        criarLink('#projects');
+    if (ehDispositivoMovel()) {
+        criarLink('#projects', true);
     }
+}
+
+function ehDispositivoMovel() {
+    return screen.width < 900;
 }
 
 function tratarSlide(slideDestino) {
@@ -61,10 +65,13 @@ function tratarLinhasMenu() {
     }
 }
 
-function criarLink(url) {
+function criarLink(url, ehProjetoSlide) {
     const tagA = document.createElement("a");
     tagA.href = url;
-    tagA.target = 'blank';
+
+    if (!ehProjetoSlide){
+        tagA.target = 'blank';
+    }
     tagA.click();
 }
 
