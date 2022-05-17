@@ -417,6 +417,15 @@ button:hover {
 	background-image: url(../Assets/insta.png);
 }
 
+#mayara_portfolio {
+	background-image: url(../Assets/law.png);
+}
+
+#moogle {
+	background-image: url(../Assets/moogle_logo.png);
+}
+
+
 #button_see_git {
 	margin: 2rem;
 }

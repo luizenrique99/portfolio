@@ -17,7 +17,8 @@ function isMobileDevice() {
 function handleSlide(sourceSlide) {
     const slides = [
         document.getElementById('slide-1'),
-        document.getElementById('slide-2')
+        document.getElementById('slide-2'),
+        document.getElementById('slide-3')
     ];
 
     for (let index = 0; index < slides.length; index++) {
@@ -34,7 +35,8 @@ function handleSlide(sourceSlide) {
 function handlePage(sourcePage) {
     const pages = [
         document.getElementById('page-1'),
-        document.getElementById('page-2')
+        document.getElementById('page-2'),
+        document.getElementById('page-3')
     ];
 
     for (let index = 0; index < pages.length; index++) {
