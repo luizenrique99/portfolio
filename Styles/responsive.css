@@ -12,6 +12,7 @@
 		float: right;
 		margin-right: 4rem;
 	}
+
 	#menu {
 		display: block;
 		position: absolute;
@@ -20,73 +21,87 @@
 		right: 0;
 		width: 100%;
 		height: 0;
-		background: var(--cor-primaria);
+		background: var(--primary_color);
 		transition: .6s;
 		z-index: 1000;
 		visibility: hidden;
 		overflow-y: hidden;
 	}
+
 	#menu.active {
 		height: calc(100vh - 90px);
 		visibility: visible;
 		overflow-y: auto;
 		width: 65%;
 	}
+
 	#menu li {
 		display: block;
 		padding: 1rem;
 		border-bottom: 2px solid rgba(255, 255, 255, 0.05);
 	}
+
 	header {
 		height: 2em;
 		padding: 2em 2em;
 		text-align: left;
 	}
+
 	#logo {
 		margin-right: 0;
 	}
-	#apresentacao {
+
+	#apresentation {
 		font-size: 20px;
 	}
-	.subsecao {
+
+	.subsection {
 		margin: 1em;
 	}
-	.linha {
+
+	.line {
 		width: 1.5rem;
 		height: 0.188rem;
 		border-radius: 2px;
 		transition: transform .2s ease-out;
 		-webkit-transition: transform .2s ease-out;
-		background: var(--cor-terciaria);
+		background: var(--tertiary_color);
 		margin-top: 0.2em;
 	}
-	#linha1.active {
+
+	#line1.active {
 		transform: rotate(-45deg);
 	}
-	#linha2.active {
+
+	#line2.active {
 		transform: rotate(45deg);
 	}
-	#linha3.active {
+
+	#line3.active {
 		visibility: hidden;
 	}
-	#eu {
+
+	#me {
 		height: 15rem;
 		width: 15rem;
 	}
-	#sobre_descricao {
+
+	.description_about {
 		width: 90%;
 		text-align: justify;
 	}
+
 	.card {
 		width: 20rem;
 		padding: 1rem;
 		margin: 1rem 0;
 	}
+
 	button {
 		width: 100%;
 	}
 
-	.quadrado {
+	.square {
 		display: none;
 	}
 }

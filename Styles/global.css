@@ -1,15 +1,15 @@
 :root {
-	--cor-primaria: #212121;
-	--cor-secundaria: #262626;
-	--cor-terciaria: #cd00bb;
-	--cor-texto: #ffff;
+	--primary_color: #212121;
+	--secondary_color: #262626;
+	--tertiary_color: #cd00bb;
+	--text_color: #ffff;
 	--mode: 'Dark Mode';
 }
 
 .light-mode {
-	--cor-primaria: #bdbdbd;
-	--cor-secundaria: #a9a9a9;
-	--cor-texto: #000;
+	--primary_color: #bdbdbd;
+	--secondary_color: #a9a9a9;
+	--text_color: #000;
 	--mode: 'Light Mode';
 }
 
@@ -20,9 +20,9 @@
 
 html,
 body {
-	color: var(--cor-texto);
+	color: var(--text_color);
 	font-family: system-ui;
-	background-color: var(--cor-primaria);
+	background-color: var(--primary_color);
 	overflow-y: auto;
 	overflow-x: hidden;
 }
@@ -31,7 +31,7 @@ header {
 	padding: 1em;
 	position: fixed;
 	width: 100%;
-	background: var(--cor-primaria);
+	background: var(--primary_color);
 	text-align: center;
 	width: 100%;
 	z-index: 1;
@@ -53,7 +53,7 @@ footer {
 
 .links {
 	font-weight: bold;
-	color: var(--cor-terciaria);
+	color: var(--tertiary_color);
 }
 
 .switch {
@@ -94,11 +94,11 @@ footer {
 }
 
 input:checked+.slider {
-	background-color: var(--cor-terciaria);
+	background-color: var(--tertiary_color);
 }
 
 input:focus+.slider {
-	box-shadow: 0 0 1px var(--cor-terciaria);
+	box-shadow: 0 0 1px var(--tertiary_color);
 }
 
 input:checked+.slider:before {
@@ -131,12 +131,12 @@ input:checked+.slider:before {
 	display: inline-block;
 }
 
-.listrado {
-	background: var(--cor-secundaria) !important;
+.striped {
+	background: var(--secondary_color) !important;
 }
 
-.circulo_animacao {
-	background: var(--cor-terciaria);
+.animation_circle {
+	background: var(--tertiary_color);
 	height: 7rem;
 	width: 7rem;
 	opacity: .2;
@@ -144,14 +144,14 @@ input:checked+.slider:before {
 	animation: lado 10s infinite;
 }
 
-.triangulo {
+.triangle {
 	opacity: .2;
 	width: 0;
 	height: 0;
 	position: absolute;
 	border-left: 3rem solid transparent;
 	border-right: 3rem solid transparent;
-	border-bottom: 5rem solid var(--cor-terciaria);
+	border-bottom: 5rem solid var(--tertiary_color);
 	margin: 2rem;
 	padding-top: 5rem;
 	z-index: -1;
@@ -159,11 +159,11 @@ input:checked+.slider:before {
 	animation: cima 10s infinite;
 }
 
-.quadrado {
+.square {
     opacity: .2;
     width: 5rem;
     position: absolute;
-    border-bottom: 5rem solid var(--cor-terciaria);
+    border-bottom: 5rem solid var(--tertiary_color);
     margin: -9rem 21rem;
     padding-top: 5rem;
     z-index: -1;
@@ -233,11 +233,11 @@ input:checked+.slider:before {
 	}
 }
 
-.meu_nome {
-	color: var(--cor-terciaria);
+.my_name {
+	color: var(--tertiary_color);
 }
 
-#consideracoes {
+#considerations {
 	text-align: center;
 	padding-top: 2em;
 }
@@ -246,27 +246,27 @@ input:checked+.slider:before {
 	display: none;
 }
 
-#apresentacao {
+#apresentation {
 	margin-top: 10rem;
 	text-align: center;
 	font-size: 1.2em;
 }
 
-.secao {
+.section {
 	text-align: center;
 	height: 100%;
 	display: flow-root;
 }
 
-#eu {
+#me {
 	background-image: url(../Assets/eu.png);
-	background-color: var(--cor-terciaria);
+	background-color: var(--tertiary_color);
     border: 0.2rem solid;
 	height: 20rem;
 	width: 20rem;
 }
 
-#eu:hover {
+#me:hover {
 	background-color: purple;
 }
 
@@ -282,7 +282,7 @@ input:checked+.slider:before {
 	background-image: url(../Assets/dpworld_logo.png);
 }
 
-.imagem_redonda {
+.round_picture {
 	background-repeat: no-repeat;
 	background-size: cover;
 	border-radius: 50%;
@@ -309,41 +309,41 @@ li {
 
 a {
 	text-decoration: none;
-	color: var(--cor-texto);
+	color: var(--text_color);
 }
 
 a:hover {
-	color: var(--cor-terciaria);
+	color: var(--tertiary_color);
 }
 
-.titulo {
+.title {
 	margin: 2rem;
 }
 
-.tecnologia {
+.technology {
 	height: 5rem;
 }
 
-.subtitulo {
+.subtitle {
 	margin-bottom: 1rem;
 }
 
-#sobre_descricao {
+.description_about {
 	width: 50%;
 	text-align: justify;
 }
 
-.subsecao {
+.subsection {
 	margin: 2em;
 	display: inline-block;
 	vertical-align: top;
 }
 
-.tecnologia:hover {
+.technology:hover {
 	animation: zoom-in-zoom-out 1s ease forwards;
 }
 
-.secao,
+.section,
 #banner {
 	scroll-margin-top: 4.5em;
 	visibility: hidden;
@@ -352,7 +352,7 @@ a:hover {
 button {
 	width: 15rem;
 	height: 3.8rem;
-	background: var(--cor-terciaria);
+	background: var(--tertiary_color);
 	box-shadow: 0 1.6rem 1.6rem rgb(51 51 51 / 25%);
 	border-radius: 3rem;
 	cursor: pointer;
@@ -366,14 +366,14 @@ button {
 
 button:hover {
 	background-color: transparent;
-	border: medium groove var(--cor-terciaria);
-	color: var(--cor-terciaria);
+	border: medium groove var(--tertiary_color);
+	color: var(--tertiary_color);
 }
 
 .card {
 	height: 30rem;
 	width: 22rem;
-	background: var(--cor-secundaria);
+	background: var(--secondary_color);
 	border-radius: 1rem;
 	margin: 1rem;
 	display: inline-flex;
@@ -383,11 +383,11 @@ button:hover {
 	align-items: center;
 	flex-wrap: wrap;
 	padding: 1rem;
-    border: 0.1rem solid var(--cor-terciaria);
+    border: 0.1rem solid var(--tertiary_color);
 }
 
 #testimonials .card {
-	background: var(--cor-primaria);
+	background: var(--primary_color);
 }
 
 #spotify_player_project,
@@ -417,17 +417,17 @@ button:hover {
 	background-image: url(../Assets/insta.png);
 }
 
-#button_ver_git {
+#button_see_git {
 	margin: 2rem;
 }
 
-.frase-depoimento {
+.testimonial_phrase {
 	font-style: italic;
 	font-size: large;
 }
 
-.frase-depoimento::before,
-.frase-depoimento::after {
+.testimonial_phrase::before,
+.testimonial_phrase::after {
 	content: '"';
 }
 
@@ -437,11 +437,11 @@ button:hover {
 	font-size: 1.2rem;
 }
 
-.cargo-depoimento {
+.testimonial_position {
 	font-style: italic;
 }
 
-#depoimentos {
+#testimonials_content {
 	display: inline-flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -464,7 +464,7 @@ button:hover {
 	background-image: url(../Assets/gmail.png);
 }
 
-#telefone {
+#phone {
 	background-image: url(../Assets/wpp.png);
 }
 
@@ -472,7 +472,7 @@ button:hover {
     display: none;
 }
 
-.pagina-slide {
+.page-slide {
     cursor: pointer;
     width: 1rem;
     height: 1rem;
@@ -481,7 +481,7 @@ button:hover {
 }
 
 .active {
-    background: var(--cor-terciaria);
+    background: var(--tertiary_color);
 }
 
 @keyframes zoom-in-zoom-out {
@@ -494,5 +494,5 @@ button:hover {
 }
 
 ::selection {
-	background: var(--cor-terciaria);
+	background: var(--tertiary_color);
 }

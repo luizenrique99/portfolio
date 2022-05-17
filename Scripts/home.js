@@ -1,20 +1,20 @@
 function toggleMenu() {
-    tratarMenu();
-    tratarLinhasMenu();
+    handleMenu();
+    handleMenuLines();
 }
-function proximoSlideProjects (destino) {
-    tratarSlide(destino);
-    tratarPagina(destino);
-    if (ehDispositivoMovel()) {
-        criarLink('#projects', true);
+function nextSlideProjects (source) {
+    handleSlide(source);
+    handlePage(source);
+    if (isMobileDevice()) {
+        createLink('#projects', true);
     }
 }
 
-function ehDispositivoMovel() {
+function isMobileDevice() {
     return screen.width < 900;
 }
 
-function tratarSlide(slideDestino) {
+function handleSlide(sourceSlide) {
     const slides = [
         document.getElementById('slide-1'),
         document.getElementById('slide-2')
@@ -22,7 +22,7 @@ function tratarSlide(slideDestino) {
 
     for (let index = 0; index < slides.length; index++) {
         const element = slides[index];
-        if (element.id == `slide-${slideDestino}`){
+        if (element.id == `slide-${sourceSlide}`){
             element.classList.remove('offline');
         }
         else {
@@ -31,15 +31,15 @@ function tratarSlide(slideDestino) {
     }
 }
 
-function tratarPagina(paginaDestino) {
-    const paginas = [
-        document.getElementById('pagina-1'),
-        document.getElementById('pagina-2')
+function handlePage(sourcePage) {
+    const pages = [
+        document.getElementById('page-1'),
+        document.getElementById('page-2')
     ];
 
-    for (let index = 0; index < paginas.length; index++) {
-        const element = paginas[index];
-        if (element.id == `pagina-${paginaDestino}`){
+    for (let index = 0; index < pages.length; index++) {
+        const element = pages[index];
+        if (element.id == `page-${sourcePage}`){
             element.classList.add('active');
         }
         else {
@@ -48,24 +48,24 @@ function tratarPagina(paginaDestino) {
     }
 }
 
-function tratarMenu() {
+function handleMenu() {
     const menu = document.getElementById('menu');
     menu.classList.toggle('active');
 }
 
-function mudarTema() {
+function changeTheme() {
     const body = document.getElementsByTagName('body');
     body[0].classList.toggle('light-mode');
 }
 
-function tratarLinhasMenu() {
-    const linhas = document.getElementsByClassName('linha');
-    for (let index = 0; index < linhas.length; index++) {
-        linhas[index].classList.toggle('active');
+function handleMenuLines() {
+    const lines = document.getElementsByClassName('line');
+    for (let index = 0; index < lines.length; index++) {
+        lines[index].classList.toggle('active');
     }
 }
 
-function criarLink(url, ehProjetoSlide) {
+function createLink(url, ehProjetoSlide) {
     const tagA = document.createElement("a");
     tagA.href = url;
 
@@ -76,42 +76,42 @@ function criarLink(url, ehProjetoSlide) {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    const btnMobile = document.getElementById('btn-mobile');
-    btnMobile.addEventListener('click', toggleMenu);  
-    animacoesPagina();
+    const mobileButton = document.getElementById('btn-mobile');
+    mobileButton.addEventListener('click', toggleMenu);  
+    animationsPage();
 });
 
-function animacoesPagina() {
-    getElementosSecao('banner');
-    getSecoes();
+function animationsPage() {
+    getSectionElements('banner');
+    getSection();
 }
 
-function getSecoes () {
-    const secao = document.querySelectorAll('.secao');
-    for (let index = 0; index < secao.length; index++) {
-        getElementosSecao(secao[index].id);
+function getSection () {
+    const section = document.querySelectorAll('.section');
+    for (let index = 0; index < section.length; index++) {
+        getSectionElements(section[index].id);
     }
 }
 
-function getElementosSecao(secaoId) {
-    const secao = document.getElementById(secaoId);
-    for (let index = 0; index < secao.childNodes.length; index++) {
-        const elemento = secao.childNodes[index]; 
-        if (elemento.id === 'depoimentos') {
-            getElementosSecao(elemento.id);
+function getSectionElements(sectionId) {
+    const section = document.getElementById(sectionId);
+    for (let index = 0; index < section.childNodes.length; index++) {
+        const element = section.childNodes[index]; 
+        if (element.id === 'testimonials_content') {
+            getSectionElements(element.id);
         }
         else {
-            animacaoPorElemento(elemento);
+            animationForElement(element);
         }
     }
 }
 
-function animacaoPorElemento(elemento) {
-    if (elemento.nodeType === 1) {
+function animationForElement(element) {
+    if (element.nodeType === 1) {
         let callback = function(entries) {
             entries.forEach(entry => {
                 if (entry.intersectionRatio > 0) {
-                    elemento.classList.add('animation-show');
+                    element.classList.add('animation-show');
                 }
             });
         };
@@ -122,6 +122,6 @@ function animacaoPorElemento(elemento) {
         }
 
         const io = new IntersectionObserver(callback, options);
-        io.observe(elemento);
+        io.observe(element);
     }
 }
