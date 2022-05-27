@@ -274,6 +274,10 @@ input:checked+.slider:before {
 	background-image: url(../Assets/magnifinance.jpg);
 }
 
+#logo_trybe {
+	background-image: url(../Assets/trybe.png);
+}
+
 #logo_aka {
 	background-image: url(../Assets/logo_aka.jpg);
 }
