@@ -394,7 +394,7 @@ button:hover {
 	background: var(--primary_color);
 }
 
-#spotify_player_project,
+#nif_validator,
 #magniuniversity,
 #good_morning_generator {
 	display: block;
@@ -404,8 +404,8 @@ button:hover {
 	transition: .2s;
 }
 
-#spotify_player_project {
-	background-image: url(../Assets/spotify.png);
+#nif_validator {
+	background-image: url(../Assets/portugal_flag.png);
 }
 
 #magniuniversity {
@@ -444,7 +444,7 @@ button:hover {
 	content: '"';
 }
 
-.nome-depoimento {
+.testimonial_name {
 	margin-top: 1rem;
 	font-weight: bold;
 	font-size: 1.2rem;
