@@ -286,6 +286,10 @@ input:checked+.slider:before {
 	background-image: url(../Assets/dpworld_logo.png);
 }
 
+#logo_decskill {
+	background-image: url(../Assets/decskill.jpg);
+}
+
 .round_picture {
 	background-repeat: no-repeat;
 	background-size: cover;
