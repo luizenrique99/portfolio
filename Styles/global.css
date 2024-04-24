@@ -259,9 +259,9 @@ input:checked+.slider:before {
 }
 
 #me {
-	background-image: url(../Assets/eu.png);
+	background-image: url(../Assets/luiz-camargo-profile.png);
 	background-color: var(--tertiary_color);
-    border: 0.2rem solid;
+    /* border: 0.2rem solid; */
 	height: 20rem;
 	width: 20rem;
 }
@@ -512,4 +512,10 @@ button:hover {
 
 ::selection {
 	background: var(--tertiary_color);
+}
+
+.tech-stack {
+	margin-top: 5px;
+	font-size: 13px;
+	font-weight: bold;
 }
